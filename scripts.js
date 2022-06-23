@@ -1,6 +1,6 @@
 async function item(){
 
-    await fetch('https://fakestoreapi.com/products/category/electronics?limit=24')
+    await fetch('https://fakestoreapi.com/products?limit=20')
             .then(res=>res.json())
             .then(json=> {
                 
@@ -36,7 +36,7 @@ async function item(){
                 cardContainers.classList.add("card-container");
                 
                 let titleLimit = json[i].title
-                titleLimit = titleLimit.slice(0, 25) + "...";
+                titleLimit = titleLimit.slice(0, 18) + "...";
 
                 let titleItems = document.createElement("p");
                 titleItems.innerHTML = titleLimit;
