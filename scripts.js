@@ -1,6 +1,6 @@
 async function item(){
 
-    await fetch('https://fakestoreapi.com/products?limit=20')
+    await fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(json=> {
                 
